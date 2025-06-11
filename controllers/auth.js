@@ -21,8 +21,8 @@ const login = (req, res) => {
 const sendIndex = (req, res) => {
     if (req.cookies.jwt){
         try{
-            jwt.verify(req.cookies.jwt, "some-secret-key")
-            return res.redirect("/admin/dashboard")
+            jwt.verify(req.cookies.jwt, "some-secret-key (home = 49)" )
+            return res.redirect("/admin/emikeeva")
         }catch(error){
             res.sendFile(path.join(__dirname, "../public/index.html"));
         }
